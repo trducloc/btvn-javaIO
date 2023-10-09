@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Scanner;
 
 
-import static service.Menu.fileUtil;
+
 
 public class ClientService {
     private static List<Client> clients;
@@ -46,11 +46,12 @@ public class ClientService {
             client.inputInfo();
             saveClient(client);
         }
-//        fileUtil.writeDataToFile(clients, CLIENT_DATA_FILE);
+
     }
 
     private void saveClient(Client client) {
         clients.add(client);
+//        FileUtil.writeDataToFile(clients, CLIENT_DATA_FILE);
     }
     public void showClient(){
         System.out.println(clients);

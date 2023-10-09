@@ -1,4 +1,4 @@
-package util.file;
+package util;
 
 public interface DataWritable {
 

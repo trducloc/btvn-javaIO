@@ -1,4 +1,4 @@
-package util.File;
+package util;
 
 public interface DataReadable {
 

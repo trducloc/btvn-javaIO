@@ -7,39 +7,34 @@ import service.BankService;
 import service.ClientService;
 import service.SavingBookService;
 import util.DataUtil;
-
-
+import util.FileUtil;
 
 
 import java.util.*;
 
 public class Menu {
 
-//    public static List<Bank> banks;
-//    public static List<Client> clients;
-//    public static List<SavingBook> savingBooks;
+    private static ClientService clientService;
+    private static BankService bankService;
+    private static SavingBookService savingBookService;
 
-    private static final ClientService clientService = new ClientService();
-    private static final BankService bankService = new BankService();
-    private static final SavingBookService savingBookService = new SavingBookService(clientService, bankService);
-
-    public static util.file.FileUtil fileUtil = new util.file.FileUtil();
+//    public static FileUtil fileUtil = new FileUtil();
     public static void main(String[] args) {
-        initializeData();
+//        initializeData();
         show();
     }
 
-    private static void initializeData() {
-        Object teacherFromFile = fileUtil.readDataFromFile(ClientService.CLIENT_DATA_FILE);
-
-        List<Client> clients = DataUtil.isNullOrEmpty(clientFromFile) ? new ArrayList<Client>() : Arrays.asList((Client[]) clientFromFile);
-
-        Object subjectFromFile = fileUtil.readDataFromFile(BankService.BANK_DATA_FILE);
-        List<Bank> banks = DataUtil.isNullOrEmpty(bankFromFile) ? new ArrayList<Bank>() : Arrays.asList((Bank[]) bankFromFile);
-
-        Object savingBookFromFile = fileUtil.readDataFromFile(SavingBookService.SAVINGBOOK_DATA_FILE);
-        List<SavingBook> savingBooks = DataUtil.isNullOrEmpty(savingBookFromFile) ? new ArrayList<SavingBook>() : Arrays.asList((SavingBook[]) savingBookFromFile);
-    }
+//    private void initializeData() {
+//        Object clientFromFile = fileUtil.readDataFromFile(ClientService.CLIENT_DATA_FILE);
+//        List<Client> clients = DataUtil.isNullOrEmpty(clientFromFile) ? new ArrayList<Client>() : (List<Client>) clientFromFile;
+//
+//
+//        Object bankFromFile = fileUtil.readDataFromFile(BankService.BANK_DATA_FILE);
+//        List<Bank> banks = DataUtil.isNullOrEmpty(bankFromFile) ? new ArrayList<Bank>() : (List<Bank>) bankFromFile;
+//
+//        Object savingBookFromFile = fileUtil.readDataFromFile(SavingBookService.SAVINGBOOK_DATA_FILE);
+//        List<SavingBook> savingBooks = DataUtil.isNullOrEmpty(savingBookFromFile) ? new ArrayList<SavingBook>() : (List<SavingBook>) savingBookFromFile;
+//    }
 
 
     public static void show() {

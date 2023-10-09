@@ -1,12 +1,9 @@
-package util.file;
+package util;
 
-import util.DataUtil;
-import util.File.DataReadable;
-import util.StringUtil;
 
 import java.io.*;
 
-public class FileUtil implements util.file.DataWritable, DataReadable {
+public class FileUtil implements DataWritable, DataReadable {
 
     @Override
     public void writeDataToFile(Object[] data, String fileName) {
